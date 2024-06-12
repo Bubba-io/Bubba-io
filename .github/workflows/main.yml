@@ -25,9 +25,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add dist/
-          git commit -m 'Update generated snake images'
+          git commit -m 'Update generated snake images' --allow-empty
           git push
         env:
-          # This token is provided by the virtual environment for authentication purposes
-          # It is recommended to store this as a secret and access it via the secrets context
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
